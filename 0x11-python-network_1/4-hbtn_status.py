@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""Error code #0"""
+"""
+Python script that fetches an URL with requests package
+"""
 import requests
 
+
 if __name__ == "__main__":
-    response = requests.get('https://intranet.hbtn.io/status')
-    req = "Body response:\n\t- type: {}\n\t- content: {}"
-    print(req.format(type(response.text), response.text))
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
